@@ -1,4 +1,4 @@
-package com.thepacific.demo;
+package com.thepacific.transformer;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
