@@ -11,7 +11,7 @@ Observable
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(data -> doSomething(data));
 ```
-We frequently use subscribeOn() , compose() and observeOn() because We want to process data in a worker thread then subscribe to it on the main thread. Now, this tiny library get you rid of it!
+We frequently use subscribeOn(), compose() and observeOn() because we want to process data in a worker thread then subscribe to it on the main thread and look up the Activity or Fragment lifecycle. Now, this tiny library get you rid of it!
 
 # Setup
 ```groovy
