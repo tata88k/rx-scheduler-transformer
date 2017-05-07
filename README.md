@@ -27,13 +27,13 @@ MaybeTransformerUtil for Maybe
 ObservableTransformerUtil for Observable
 SingleTransformerUtil for Single
 
-// Scheduler transform
-// from Schedulers.io() to AndroidSchedulers.mainThread()
-// from Schedulers.computation() to AndroidSchedulers.mainThread()
-// from Schedulers.trampoline() to AndroidSchedulers.mainThread()
-// from Schedulers.newThread() to AndroidSchedulers.mainThread()
-// from Schedulers.single() to AndroidSchedulers.mainThread()
-// from Schedulers.from(executor) to AndroidSchedulers.mainThread()
+// Transform schedulers
+// from   Schedulers.io()             to   AndroidSchedulers.mainThread()
+// from   Schedulers.computation()    to   AndroidSchedulers.mainThread()
+// from   Schedulers.trampoline()     to   AndroidSchedulers.mainThread()
+// from   Schedulers.newThread()      to   AndroidSchedulers.mainThread()
+// from   Schedulers.single()         to   AndroidSchedulers.mainThread()
+// from   Schedulers.from(executor)   to   AndroidSchedulers.mainThread()
 
 ```
 # Usage
@@ -51,4 +51,9 @@ Observable
         .map(data -> manipulate(data))
         .compose(ObservableTransformerUtil.io(lifecycle(), ActivityEvent.DESTROY))
         .subscribe(data -> doSomething(data));
+
+// Now, we don't need to write:
+// .subscribeOn(Schedulers.io())
+// .compose(bindUntilEvent(ActivityEvent.DESTROY))
+// .observeOn(AndroidSchedulers.mainThread())
 ```
