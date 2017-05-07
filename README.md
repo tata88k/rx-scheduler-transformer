@@ -1,5 +1,5 @@
 # rx-scheduler-transformer
-Rxjava2 scheduler transformer tools for [RxLife](https://github.com/trello/RxLifecycle) in android.
+Rxjava2 scheduler transformer tools for [RxLife](https://github.com/trello/RxLifecycle) in android.[ ![Download](https://api.bintray.com/packages/thepacific/maven/transformer/images/download.svg) ](https://bintray.com/thepacific/maven/transformer/_latestVersion)
 
 One nice aspect of RxJava is that you can see how data is transformed through a series of operators:
 ```java
