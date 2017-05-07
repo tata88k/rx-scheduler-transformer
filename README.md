@@ -36,8 +36,8 @@ SingleTransformerUtil for Single
 // from   Schedulers.from(executor)   to   AndroidSchedulers.mainThread()
 
 ```
-# Usage
 
+# Usage
 ```java
 // ObservableTransformerUtil.io(lifecycle(), ActivityEvent.DESTROY))
 // ObservableTransformerUtil.computation(lifecycle(), ActivityEvent.DESTROY))
@@ -51,9 +51,7 @@ Observable
         .map(data -> manipulate(data))
         .compose(ObservableTransformerUtil.io(lifecycle(), ActivityEvent.DESTROY))
         .subscribe(data -> doSomething(data));
-
-// Now, we don't need to write:
-// .subscribeOn(Schedulers.io())
-// .compose(bindUntilEvent(ActivityEvent.DESTROY))
-// .observeOn(AndroidSchedulers.mainThread())
 ```
+
+# License  
+[The MIT License ](https://opensource.org/licenses/MIT)
