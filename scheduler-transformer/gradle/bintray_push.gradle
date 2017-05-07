@@ -55,8 +55,8 @@ bintray {
     publish true
     pkg {
         repo = "maven"
-        name = "adapter"
-        labels = ['adapter', 'ThePacific']
+        name = "transformer"
+        labels = ['transformer', 'ThePacific']
         websiteUrl = WEB_SITE_URL
         issueTrackerUrl = ISSUE_TRACKER_URL
         vcsUrl = VCS_URL
