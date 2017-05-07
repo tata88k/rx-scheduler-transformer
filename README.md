@@ -1,5 +1,5 @@
 # rx-scheduler-transformer
-Rxjava2 scheduler transformer tools for android.
+Rxjava2 scheduler transformer tools for [RxLife](https://github.com/trello/RxLifecycle) in android.
 
 One nice aspect of RxJava is that you can see how data is transformed through a series of operators:
 ```java
@@ -15,7 +15,7 @@ We frequently use subscribeOn() , compose() and observeOn() because We want to p
 
 # Setup
 ```groovy
-compile 'com.github.thepacific:banner:0.0.1'
+compile 'com.github.thepacific:transformer:0.0.1'
 ```
 
 # Support
